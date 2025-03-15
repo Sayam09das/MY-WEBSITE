@@ -19,7 +19,11 @@ router.get('/about', (req, res) => {
 });
 
 router.get('/projects', (req, res) => {
-    res.render('projects/projects')
+    res.render('projectpage/project')
+});
+
+router.get('/skills', (req, res) => {
+    res.render('skillspage/skills')
 });
 
 router.get('/contact', (req, res) => {

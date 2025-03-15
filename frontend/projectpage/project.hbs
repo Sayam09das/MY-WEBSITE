@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayam Das | Building the Future, One Line of Code at a Time</title>
+    <link rel="icon" href="/images/logo.jpg" type="image/jpg" sizes="72x72">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./project.css">
+</head>
+
+<body>
+    <div id="canvas-container"></div>
+    <div class="content">
+        <nav>
+            <div class="logo">Sayam Das</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/skills">Skills</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="resume-button-mobile">
+                <a href="Resume.pdf" download class="resume-btn" style="text-decoration: none;">Download Resume</a>
+            </div>
+
+        </nav>
+
+
+        <section class="projects-section" id="projects">
+
+            <div class="container">
+                <h2 class="section-title">Current Projects</h2>
+                <div class="projects">
+                    <!-- Project 1 - Responsive Food Ordering App -->
+                    <div class="project-card">
+                        <img src="/images/food.webp" alt="Responsive Food Ordering App" class="project-image">
+                        <div class="project-info">
+                            <h3 class="project-title">Responsive Food Ordering App</h3>
+                            <p class="project-description">
+                                A responsive food ordering app where users can browse menus, add items to their cart,
+                                and place orders online. Built with HTML, CSS, and JavaScript, with real-time cart
+                                updates and mobile-friendly design. Future updates include user authentication, secure
+                                payments, and live order tracking.
+                            </p>
+
+                            <div class="project-buttons">
+                                <a href="https://yourfoodappdemo.com" class="btn btn-primary" target="_blank">Live
+                                    Demo</a>
+                                <a href="https://github.com/yourusername/food-ordering-app" class="btn btn-secondary"
+                                    target="_blank">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 - Learning Management System (LMS) -->
+                    <div class="project-card">
+                        <img src="/images/lms.jpg" alt="Learning Management System" class="project-image">
+                        <div class="project-info">
+                            <h3 class="project-title">Learning Management System (LMS)</h3>
+                            <p class="project-description">
+                                A Learning Management System for students and teachers with features like course
+                                management, assignments, quizzes, and progress tracking. Built with HTML, CSS,
+                                JavaScript, Node.js, and MongoDB.
+                            </p>
+
+                            <div class="project-buttons">
+                                <a href="https://yourlmsdemo.com" class="btn btn-primary" target="_blank">Live Demo</a>
+                                <a href="https://github.com/yourusername/lms-project" class="btn btn-secondary"
+                                    target="_blank">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 - E-commerce Website -->
+                    <div class="project-card">
+                        <img src="/images/e-commerce.png" alt="E-commerce Website" class="project-image">
+                        <div class="project-info">
+                            <h3 class="project-title">E-commerce Website</h3>
+                            <p class="project-description">
+                                A fully responsive e-commerce platform with custom shopping cart and payment
+                                integration.
+                                Built with React, Node.js, and MongoDB.
+                            </p>
+                            <div class="project-buttons">
+                                <a href="#" class="btn btn-primary" target="_blank">Live
+                                    Demo</a>
+                                <a href="#" class="btn btn-secondary" target="_blank">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 - Task Management App -->
+                    <div class="project-card">
+                        <img src="/images/task.jpg" alt="Task Management App" class="project-image">
+                        <div class="project-info">
+                            <h3 class="project-title">Task Management App</h3>
+                            <p class="project-description">
+                                A productivity application with drag-and-drop functionality, reminders, and team
+                                collaboration features.
+                            </p>
+                            <div class="project-buttons">
+                                <a href="https://yourtaskappdemo.com" class="btn btn-primary" target="_blank">Live
+                                    Demo</a>
+                                <a href="https://github.com/yourusername/taskapp-project" class="btn btn-secondary"
+                                    target="_blank">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 - Portfolio Website -->
+                    <div class="project-card">
+                        <img src="/images/portflio.jpg" alt="Portfolio Website" class="project-image">
+                        <div class="project-info">
+                            <h3 class="project-title">Portfolio Website</h3>
+                            <p class="project-description">
+                                A modern, minimalist portfolio website with smooth animations and dark/light theme
+                                switch.
+                            </p>
+                            <div class="project-buttons">
+                                <a href="https://yourportfoliodemo.com" class="btn btn-primary" target="_blank">Live
+                                    Demo</a>
+                                <a href="https://github.com/yourusername/portfolio-project" class="btn btn-secondary"
+                                    target="_blank">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 - Weather Application -->
+                    <div class="project-card">
+                        <img src="/images/wheather.png" alt="Weather Application" class="project-image">
+                        <div class="project-info">
+                            <h3 class="project-title">Weather Application</h3>
+                            <p class="project-description">
+                                A weather forecast application with location detection, hourly updates, and interactive
+                                maps.
+                            </p>
+                            <div class="project-buttons">
+                                <a href="https://yourweatherappdemo.com" class="btn btn-primary" target="_blank">Live
+                                    Demo</a>
+                                <a href="https://github.com/yourusername/weatherapp-project" class="btn btn-secondary"
+                                    target="_blank">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-projects-section" id="featured-projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects">
+
+
+                    <div class="project-card">
+                        <img src="/images/ai.webp" alt="AI Chatbot" class="project-image">
+                        <div class="project-info">
+                            <h3 class="project-title">AI Chatbot</h3>
+                            <p class="project-description">
+                                A smart AI-driven chatbot built using Python and natural language processing (NLP). This
+                                chatbot can understand user queries and provide automated customer support in real-time.
+                                Built with Python, NLTK, and spaCy for enhanced conversational abilities.
+                            </p>
+                            <div class="project-buttons">
+                                <a href="https://yourai-chatbotdemo.com" class="btn btn-primary" target="_blank">Live
+                                    Demo</a>
+                                <a href="https://github.com/yourusername/ai-chatbot-project" class="btn btn-secondary"
+                                    target="_blank">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card">
+                        <img src="/images/data-analytics.jpg" alt="Python Data Analysis Tool" class="project-image">
+                        <div class="project-info">
+                            <h3 class="project-title">Python Data Analysis Tool</h3>
+                            <p class="project-description">
+                                A Python-based tool for data analysis, capable of processing and visualizing large
+                                datasets using libraries like Pandas, NumPy, and Matplotlib. Perfect for analyzing sales
+                                data, customer behavior, and more.
+                            </p>
+                            <div class="project-buttons">
+                                <a href="https://yourdataanalysisdemo.com" class="btn btn-primary" target="_blank">Live
+                                    Demo</a>
+                                <a href="https://github.com/yourusername/data-analysis-project"
+                                    class="btn btn-secondary" target="_blank">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card">
+                        <img src="/images/machine learn.jpg" alt="Machine Learning Model" class="project-image">
+                        <div class="project-info">
+                            <h3 class="project-title">Machine Learning Model for Predictive Analytics</h3>
+                            <p class="project-description">
+                                A predictive analytics model built with machine learning algorithms to forecast future
+                                trends based on historical data. Developed using Python, Scikit-learn, and TensorFlow,
+                                it is designed for business forecasting and decision-making.
+                            </p>
+                            <div class="project-buttons">
+                                <a href="https://yourmlmodeldemo.com" class="btn btn-primary" target="_blank">Live
+                                    Demo</a>
+                                <a href="https://github.com/yourusername/ml-model-project" class="btn btn-secondary"
+                                    target="_blank">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card">
+                        <img src="/images/ai-img.jpg" alt="AI Image Recognition App" class="project-image">
+                        <div class="project-info">
+                            <h3 class="project-title">AI Image Recognition App</h3>
+                            <p class="project-description">
+                                A deep learning-based image recognition app that can classify and recognize objects in
+                                images. Built with Python and TensorFlow, this app uses convolutional neural networks
+                                (CNN) for accurate image classification.
+                            </p>
+                            <div class="project-buttons">
+                                <a href="https://yourimagerrecognitiondemo.com" class="btn btn-primary"
+                                    target="_blank">Live Demo</a>
+                                <a href="https://github.com/yourusername/image-recognition-project"
+                                    class="btn btn-secondary" target="_blank">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card">
+                        <img src="/images/ai-music.png" alt="AI-powered Music Recommendation System"
+                            class="project-image">
+                        <div class="project-info">
+                            <h3 class="project-title">AI-powered Music Recommendation System</h3>
+                            <p class="project-description">
+                                An AI-driven music recommendation system that suggests songs based on user preferences,
+                                listening history, and machine learning algorithms. Built with Python and integrated
+                                with Spotify API for real-time music recommendations.
+                            </p>
+                            <div class="project-buttons">
+                                <a href="https://yourmusicrecommendationdemo.com" class="btn btn-primary"
+                                    target="_blank">Live Demo</a>
+                                <a href="https://github.com/yourusername/music-recommendation-project"
+                                    class="btn btn-secondary" target="_blank">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card">
+                        <img src="/images/ai-chat.webp" alt="Real-Time Chat Application" class="project-image">
+                        <div class="project-info">
+                            <h3 class="project-title">Real-Time Chat Application</h3>
+                            <p class="project-description">
+                                A real-time chat application where users can communicate through private and group
+                                chats. Built using Node.js, Express, Socket.IO, and MongoDB for seamless messaging and
+                                connection management.
+                            </p>
+                            <div class="project-buttons">
+                                <a href="https://yourchatappdemo.com" class="btn btn-primary" target="_blank">Live
+                                    Demo</a>
+                                <a href="https://github.com/yourusername/chat-app-project" class="btn btn-secondary"
+                                    target="_blank">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-title">Portfolio</h3>
+                    <p style="color: #aaaaaa; margin-bottom: 1rem;">
+                        Passionate about building responsive websites and bringing ideas to life through clean code and
+                        creative design.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/projects">Projects</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Full Stack Development</a></li>
+                        <li><a href="#">Frontend Development</a></li>
+                        <li><a href="#">Backend Development</a></li>
+                        <li><a href="#">Responsive Web Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li>📧 sayamdas02@gmail.com</li>
+                        <li>📱 +91 98765 43210</li>
+                        <li>🏙️ Midnapore, West Bengal, India</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2025 Sayam Das Portfolio. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="./animation.js"></script>
+    <script src="./project.js"></script>
+</body>
+
+</html>
