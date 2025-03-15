@@ -1,0 +1,37 @@
+# Ignore .env files
+.env
+
+# Ignore image files or folders (e.g., if you're storing images in a specific folder)
+photos/
+uploads/
+images/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore node_modules if using Node.js / npm / yarn
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore environment variables (keep secrets out of Git)
+.env
+
+# Ignore build output (optional)
+dist/
+build/
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Ignore VSCode settings (if you use VSCode)
+.vscode/
+
+# Ignore any personal config files
+*.local
