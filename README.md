@@ -1,8 +1,8 @@
-# Interactive Personal Portfolio Website with 3D Animations
+# Interactive Portfolio Website with AI Chatbot Integration
 
-A modern, responsive personal portfolio website that combines elegant design with interactive 3D animations. Built with Express.js and Three.js, this portfolio showcases professional experience and projects through an immersive user interface featuring dynamic particle effects and responsive layouts.
+A modern, responsive portfolio website featuring an AI-powered chatbot assistant, interactive 3D animations, and a seamless contact system. The website combines engaging visual elements with practical functionality to showcase professional work and enable direct communication.
 
-The website delivers a unique user experience through its blend of traditional web elements and modern 3D graphics. It features smooth animations, responsive design, and interactive elements that engage visitors while maintaining professional presentation. The application uses Handlebars templating for efficient page rendering, Three.js for WebGL animations, and Express.js for robust backend routing and static file serving.
+This full-stack application uses Node.js and Express for the backend, with MongoDB for data persistence. The frontend leverages Three.js for immersive 3D animations and Handlebars for templating. The integrated AI chatbot provides real-time interaction with visitors, while the email system ensures reliable communication through NodeMailer.
 
 ## Repository Structure
 ```
@@ -10,28 +10,39 @@ The website delivers a unique user experience through its blend of traditional w
 ├── backend/                 # Server-side application code
 │   ├── app.js              # Express application setup and middleware configuration
 │   ├── database/           # Database connection and models
-│   ├── routes/             # API and page routing definitions
-│   ├── server.js           # HTTP server initialization
+│   ├── models/             # MongoDB schemas and models
+│   ├── routes/             # API route definitions
+│   ├── services/           # Business logic and external service integrations
 │   └── static.js           # Static file serving configuration
 ├── frontend/               # Client-side application code
-│   ├── aboutpage/         # About page components and styles
-│   └── homepage/          # Home page components and styles
-├── package.json           # Project dependencies and scripts
-└── README.md             # Project documentation
+│   ├── aboutpage/          # About page components and styles
+│   ├── homepage/           # Home page with chatbot integration
+│   ├── projectpage/        # Project showcase components
+│   └── skillspage/        # Skills display with 3D animations
+└── package.json           # Project dependencies and scripts
 ```
 
 ## Usage Instructions
 ### Prerequisites
-- Node.js (v12.0.0 or higher)
-- npm (v6.0.0 or higher)
+- Node.js (v14 or higher)
+- MongoDB (v4.4 or higher)
 - Modern web browser with WebGL support
-- MongoDB (v4.0 or higher)
+- Gmail account for email service integration
+
+Required environment variables:
+```
+PORT=3000
+MONGO_URI=your_mongodb_connection_string
+EMAIL_USER=your_gmail_address
+EMAIL_PASS=your_gmail_app_password
+```
 
 ### Installation
+
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd <repository-name>
+cd portfolio-website
 ```
 
 2. Install dependencies:
@@ -39,84 +50,109 @@ cd <repository-name>
 npm install
 ```
 
-3. Create a `.env` file in the root directory with the following variables:
-```
-PORT=3000
-MONGO_URI=<your-mongodb-connection-string>
+3. Set up environment variables:
+```bash
+cp .env.example .env
+# Edit .env with your configuration
 ```
 
-4. Start the development server:
+4. Start MongoDB service:
+```bash
+# MacOS
+brew services start mongodb-community
+
+# Linux
+sudo systemctl start mongod
+
+# Windows
+net start MongoDB
+```
+
+5. Start the application:
 ```bash
 npm start
 ```
 
 ### Quick Start
-1. Access the website by navigating to `http://localhost:3000` in your web browser
-2. The home page features a 3D animated background with interactive particles
-3. Navigate through different sections using the top navigation bar
-4. View projects and skills in their respective sections
-5. Download resume using the "Download Resume" button in the navigation
+1. Access the website at `http://localhost:3000`
+2. Navigate through the different sections using the top navigation bar
+3. Interact with the AI chatbot by clicking the robot icon in the bottom right
+4. Use the contact form to send messages (requires valid email)
 
 ### More Detailed Examples
-1. Interacting with 3D animations:
+
+**Using the Chatbot:**
 ```javascript
-// Move mouse across the screen to interact with particles
-// Click navigation links for smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+// Click the robot icon to open chat
+// Example queries:
+"Tell me about your experience"
+"What projects have you worked on?"
+"How can I contact you?"
 ```
 
-2. Responsive navigation:
+**Sending Contact Messages:**
 ```javascript
-// Toggle mobile menu
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('nav ul');
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
+// Fill out the contact form with:
+name: "John Doe"
+email: "john@example.com"
+subject: "Project Inquiry"
+message: "I'd like to discuss a potential project..."
 ```
 
 ### Troubleshooting
-1. WebGL Issues
-- Problem: 3D animations not rendering
-- Solution: Check if your browser supports WebGL
-```javascript
-if (!window.WebGLRenderingContext) {
-    console.error('WebGL is not supported in this browser');
-}
+
+**Common Issues:**
+
+1. MongoDB Connection Errors
+```bash
+# Check MongoDB service status
+sudo systemctl status mongod
+
+# Verify connection string in .env
+MONGO_URI=mongodb://localhost:27017/portfolio
 ```
 
-2. Mobile Navigation Issues
-- Problem: Hamburger menu not responding
-- Solution: Clear browser cache and ensure JavaScript is enabled
-- Check console for potential errors
+2. Email Service Issues
+```bash
+# Verify Gmail credentials
+# Enable "Less secure app access" or use App Password
+# Check email service logs
+npm run debug
+```
 
-3. Performance Optimization
-- Monitor frame rate using Three.js stats
-- Reduce particle count for lower-end devices
-- Use device pixel ratio for optimal rendering
+3. 3D Animation Performance
+- Enable hardware acceleration in browser
+- Update graphics drivers
+- Reduce particle count in animation.js
 
 ## Data Flow
-The application follows a client-server architecture with dynamic page rendering and interactive client-side features.
+The application processes data through a structured flow from user interaction to storage and response.
 
 ```ascii
-[Client Browser] <---> [Express Server] <---> [MongoDB]
-      ^                      |
-      |                      v
-[Three.js Rendering] <--- [Static Files]
+User Input → Frontend → API Routes → Backend Services → Database
+     ↑                                                    ↓
+     └────────────── Email Notification ─────────────────┘
 ```
 
-Key component interactions:
-1. Express server handles incoming requests and routes them to appropriate handlers
-2. Handlebars templates render dynamic content server-side
-3. Three.js manages 3D animations and interactions client-side
-4. Static files (CSS, JS, images) are served directly by Express
-5. MongoDB stores and retrieves user data and content
-6. Client-side JavaScript handles user interactions and animation updates
-7. Responsive design adapts layout based on device characteristics
+Component Interactions:
+1. Frontend captures user input through forms and chatbot interface
+2. API routes validate and process incoming requests
+3. Backend services handle business logic and external integrations
+4. MongoDB stores contact information and user data
+5. Email service sends confirmation messages
+6. Three.js handles real-time 3D animations
+7. Handlebars manages dynamic content rendering
+
+## Infrastructure
+Static File Serving:
+- `/images`: Serves static image assets
+- `/uploads`: Handles uploaded files and documents
+- `/frontend/*`: Serves page-specific static assets
+
+Database:
+- MongoDB for contact information storage
+- Mongoose ODM for data modeling
+
+Email Service:
+- NodeMailer with Gmail SMTP
+- HTML email templates for confirmation messages

@@ -1,9 +1,8 @@
 # Ignore .env files
 .env
 
-# Ignore image files or folders (e.g., if you're storing images in a specific folder)
-photos/
-uploads/
+
+
 
 
 # Ignore system files
