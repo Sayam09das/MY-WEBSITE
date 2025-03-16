@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sayam Das | Building the Future, One Line of Code at a Time</title>
-    <link rel="icon" href="/images/logo.jpg" type="image/jpg" sizes="72x72">
+    <link rel="icon" href="/images/logo.png" type="image/jpg" sizes="72x72">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./chatbot.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
@@ -18,7 +19,10 @@
 
     <div class="content">
         <nav>
-            <div class="logo">Sayam Das</div>
+            <div class="logo">
+                <a href="/"><img src="/images//logo.png" alt="Sayam Das Logo"></a>
+            </div>
+
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
@@ -30,15 +34,61 @@
                 <i class="fas fa-bars"></i>
             </div>
             <div class="resume-button-mobile">
-                <a href="Resume.pdf" download class="resume-btn" style="text-decoration: none;">Download Resume</a>
+                <a href="http://localhost:3000/uploads/Resume.pdf" target="_blank" rel="noopener noreferrer"
+                    class="resume-btn" style="text-decoration: none;">
+                    Download Resume
+                </a>
             </div>
-
         </nav>
 
+        {{!-- Chat bot UI --}}
+        <div class="chatbot-container">
+            <div id="chat-icon">
+                <div class="icon-inner">
+                    <i class="fas fa-robot"></i>
+                </div>
+            </div>
+
+            <!-- Popup message bubble -->
+            <div id="chat-popup" class="chat-popup">
+                <p>💬 Hey! Chat with me about Sayam Das. Click here to start!</p>
+                <button id="close-popup" class="close-popup"><i class="fas fa-times"></i></button>
+            </div>
+
+            <div id="chat-box">
+                <div id="chat-header">
+                    <div class="header-left">
+                        <div class="ai-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="ai-info">
+                            <div class="ai-name">Sayam AI</div>
+                            <div class="ai-status"><span class="status-dot"></span>Online</div>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <button id="clear-chat"><i class="fas fa-trash"></i></button>
+                        <button id="close-chat"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+
+                <div id="chat-messages"></div>
+
+                <div id="chat-input">
+                    <input type="text" id="user-input" placeholder="Ask me anything...">
+                    <button id="send-button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        {{!-- Main page start --}}
         <header id="home">
-            <h1>Sayam Das</h1>
+            <h1 class="highlight-text">Sayam Das</h1>
+
             <h2>Aspiring Software Engineer | Full Stack Developer</h2>
-            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="/projects" class="btn btn-primary">View My Work</a>
+
         </header>
 
         <section id="about">
@@ -308,6 +358,7 @@
         <form action="/" method="post"></form>
     </div>
     <script src="./home.js"></script>
+    <script src="./chatbot.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./animation.js"></script>
 </body>

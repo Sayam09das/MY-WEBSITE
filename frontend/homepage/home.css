@@ -103,10 +103,31 @@ nav ul li a:hover {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff;
+    display: flex;
+    align-items: center;
 }
+
+.logo img {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+}
+
+@font-face {
+    font-family: 'Progress Bold';
+    src: url('/progress_4/ProgressExtended1.ttf') format('truetype'); 
+    font-weight: bold;
+}
+
+.highlight-text {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #64ffda, #5d5dff);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Progress Bold', sans-serif;
+}
+
 
 h1 {
     font-size: 4rem;
@@ -114,6 +135,7 @@ h1 {
     background: linear-gradient(45deg, #64ffda, #5d5dff);
     -webkit-background-clip: text;
     color: transparent;
+    font-family: 'Progress Bold', sans-serif;
 }
 
 h2 {

@@ -12,6 +12,7 @@ const contact = require('./models/contact');
 const response = require('./routes/responseRoutes');
 const emailSender = require('./services/mail');
 
+
 app.use(cors());
 dotenv.config();
 
@@ -28,6 +29,8 @@ app.use(staticRoutes);
 app.use(mainRoutes);
 app.use(response);
 app.use(emailSender);
+
+
 
 app.use((err, req, res, next) => {
     if (err instanceof SyntaxError) {
