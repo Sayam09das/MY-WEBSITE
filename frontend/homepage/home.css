@@ -306,6 +306,26 @@ textarea.form-control {
     resize: vertical;
 }
 
+#formNotification {
+    display: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.success-message {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.error-message {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
 .social-links {
     display: flex;
     justify-content: center;
@@ -390,7 +410,7 @@ footer {
         height: 200px;
     }
 
-    
+
     h1 {
         font-size: 3rem;
     }
@@ -434,7 +454,7 @@ footer {
 
     }
 
-    #resume-btn{
+    #resume-btn {
         display: inline-block;
         padding: 0.5rem 1rem;
         background-color: #64ffda;

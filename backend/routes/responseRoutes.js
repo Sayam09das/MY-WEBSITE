@@ -14,9 +14,10 @@ router.post('/contact', async (req, res) => {
         const newContact = new Contact({ name, email, subject, message });
         await newContact.save();
 
-        await sendEmail(name, email, subject, message); 
-
+        await sendEmail(name, email, subject, message);
+        
         res.status(200).json({ message: 'Message sent successfully and confirmation email sent.' });
+
     } catch (err) {
         console.error('Error saving contact:', err);
 

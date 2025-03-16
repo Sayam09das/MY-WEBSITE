@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/about', (req, res) => {
-   res.render('aboutpage/about')
+    res.render('aboutpage/about')
 });
 
 router.get('/projects', (req, res) => {
@@ -27,6 +27,10 @@ router.get('/skills', (req, res) => {
 });
 
 router.get('/contact', (req, res) => {
-    res.render('homepage/home')
+    res.render('homepage/home', {
+        GITHUB_LINK: process.env.GITHUB_LINK,
+        LINKEDIN_LINK: process.env.LINKEDIN_LINK,
+        INSTAGRAM_LINK: process.env.INSTAGRAM_LINK,
+    });
 });
 module.exports = router;
