@@ -10,7 +10,6 @@ const contactSchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true,
-        unique: true,
     },
     subject: {
         type: String,
