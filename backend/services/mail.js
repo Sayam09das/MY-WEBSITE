@@ -84,7 +84,7 @@ const sendEmail = async (name, email, subject, message) => {
                 <body>
                     <div class="container">
                         <div class="header">
-                        <img src="http://localhost:3000/images/logo.jpg" alt="Sayam Das Logo" width="80" height="80">
+                        <img src="https://i.postimg.cc/5ypK7ztD/logo.png" alt="Sayam Das Logo" width="80" height="80">
                             <h1>Sayam Das</h1>
                         </div>
                         <div class="content">
