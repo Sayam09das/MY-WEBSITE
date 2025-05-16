@@ -28,7 +28,7 @@ app.use(cookieParser());
 app.use(staticRoutes);
 app.use(mainRoutes);
 app.use(response);
-app.use(emailSender);
+
 
 
 
