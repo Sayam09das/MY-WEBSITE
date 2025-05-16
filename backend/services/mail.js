@@ -117,10 +117,10 @@ const sendEmail = async (name, email, subject, message) => {
                                 </a>
                             </p>
 
-                            <a href="https://www.sayamdas.com" class="button" target="_blank">Visit My Website</a>
+                            <a href="https://www.sayamdas.com" class="button" target="_blank" style="color: #fff">Visit My Website</a>
                         </div>
                         <div class="footer">
-                            &copy; ${new Date().getFullYear()} © 2025 Sayam Das Portfolio. All rights reserved.
+                            &copy; ${new Date().getFullYear()} Sayam Das Portfolio. All rights reserved.
                         </div>
                     </div>
                 </body>
